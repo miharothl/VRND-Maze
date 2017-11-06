@@ -9,10 +9,10 @@ public class Coin : MonoBehaviour
 
     public void OnCoinClicked() {
 
-		Debug.Log ("OnCoinClicked() was called");
-
 		// Instantiate the CoinPoof Prefab where this coin is located
         // Make sure the poof animates vertically
+		Debug.Log ("OnCoinClicked() was called");
+
 		Instantiate (coinPoofPrefab, transform.position, transform.rotation);
     
         // Destroy this coin. Check the Unity documentation on how to use Destroy

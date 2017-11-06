@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23348844640399040}
   - component: {fileID: 114841200866888688}
   - component: {fileID: 65836041086579976}
+  - component: {fileID: 114757476021196142}
   m_Layer: 0
   m_Name: Key
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1644043956173046}
   m_LocalRotation: {x: -0.5416753, y: -0.45451936, z: -0.45451963, w: 0.5416751}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.84, y: 1.54, z: -0.33}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,6 +74,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33402563482222242
 MeshFilter:
@@ -93,6 +95,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.002467547, y: 0.006717386, z: 0.018000001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114757476021196142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1644043956173046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114841200866888688}
+          m_MethodName: OnKeyClicked
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!114 &114841200866888688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,3 +136,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2253f7e5b4c14d6ca1d63312bab36c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyPoofPrefab: {fileID: 1599683551771038, guid: 6919923bd96be4c27af30f07bd3da513,
+    type: 2}
