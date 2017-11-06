@@ -9,6 +9,8 @@ public class Door : MonoBehaviour
 	private bool locked;
 	private bool opening;
 
+	public GameObject door_locked_sound;
+
 	public Door(){
 		locked = true;
 		opening = false;
@@ -38,7 +40,7 @@ public class Door : MonoBehaviour
 		if (!locked) {
 			opening = true;
 		} else {
-
+		
 		}
     }
 
