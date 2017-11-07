@@ -9,7 +9,9 @@ public class Door : MonoBehaviour
 	private bool locked;
 	private bool opening;
 
-	public GameObject door_locked_sound;
+	public AudioClip door_opened_clip;
+	public AudioClip door_locked_clip;
+	public AudioSource audio_source;
 
 	public Door(){
 		locked = true;
@@ -34,13 +36,15 @@ public class Door : MonoBehaviour
         // (optionally) Else
             // Play a sound to indicate the door is locked
 
-
 		Debug.Log ("OnDoorClicked() has been called.");
 
 		if (!locked) {
+		 	audio_source.clip = door_opened_clip;
+			audio_source.Play ();
 			opening = true;
 		} else {
-		
+			audio_source.clip = door_locked_clip;
+			audio_source.Play ();		
 		}
     }
 
